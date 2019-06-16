@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "96a76022f4c8faa5fa3cf6825097e74d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1403,6 +1403,50 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "skydiver/laravel-materialize-css",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skydiver/laravel-materialize-css.git",
+                "reference": "f9b8309e41379f561525fa79ad21c5fef64c5917"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skydiver/laravel-materialize-css/zipball/f9b8309e41379f561525fa79ad21c5fef64c5917",
+                "reference": "f9b8309e41379f561525fa79ad21c5fef64c5917",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Skydiver\\LaravelMaterializeCSS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin",
+                    "email": "labs@flydev.com"
+                }
+            ],
+            "description": "Add Materialize CSS Framework to Laravel",
+            "keywords": [
+                "css",
+                "css framework",
+                "laravel",
+                "material design",
+                "materialize"
+            ],
+            "time": "2018-10-17T00:14:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4643,7 +4687,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "skydiver/laravel-materialize-css": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
