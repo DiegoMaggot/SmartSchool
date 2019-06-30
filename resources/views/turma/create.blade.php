@@ -3,7 +3,7 @@
 @section('content')
     <div class="card s6">
         <div class="card-content">
-                <h4 class=" my-5 center">Cadastrar professor</h4>
+                <h4 class=" my-5 center">Cadastrar Turma</h4>
     <div class="row">
         @if($errors->any())
             <div class="alert alert-danger">
@@ -16,21 +16,16 @@
                 </ul>
             </div>
         @endif
-                <form class="col s12" action="/salvar-professor" method="POST">
+                <form class="col s12" action="/salvar-turma" method="POST">
                     @csrf
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input id="nome" type="text" class="validate" name="nome">
-                            <label for="nome">Nome</label>
+                        <div class="input-field col s6">
+                            <input id="campus" type="text" class="validate" name="campus">
+                            <label for="campus">Campus</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="email" type="email" class="validate" name="email">
-                            <label for="email">Email</label>
-                            <span class="helper-text" data-error="Email inválido" data-success="Email válido"></span>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="matricula" type="text" class="validate" name="matricula">
-                            <label for="matricula">Matricula</label>
+                            <input id="curso" type="text" class="validate" name="curso">
+                            <label for="curso">Curso</label>
                         </div>
                     </div>
                     <div class="center">

@@ -12,8 +12,12 @@
 <body>
 
     <ul id="professores" class="dropdown-content">
-        <li><a href="/create">Cadastrar</a></li>
+        <li><a href="/cadastroProfessor">Cadastrar</a></li>
         <li><a href="/professores">Listar</a></li>
+    </ul>
+    <ul id="turmas" class="dropdown-content">
+        <li><a href="/cadastroTurma">Cadastrar</a></li>
+        <li><a href="/turmas">Listar</a></li>
     </ul>
     <nav>
         <div class="nav-wrapper teal darken-2">
@@ -22,6 +26,7 @@
             <li><a href="sass.html">Turmas</a></li>
             <li><a href="badges.html">Avaliações</a></li>
             <li><a class="dropdown-trigger" href="/professores" data-target="professores">Professores<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="/turmas" data-target="turmas">Turmas<i class="material-icons right">arrow_drop_down</i></a></li>
             </i>
         </div>
     </nav>

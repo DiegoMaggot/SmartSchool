@@ -3,7 +3,7 @@
 @section('content')
     <div class="card s6">
         <div class="card-content">
-                <h4 class=" my-5 center">Cadastrar professor</h4>
+                <h4 class=" my-5 center">Cadastrar Aluno</h4>
     <div class="row">
         @if($errors->any())
             <div class="alert alert-danger">
@@ -16,7 +16,7 @@
                 </ul>
             </div>
         @endif
-                <form class="col s12" action="/salvar-professor" method="POST">
+                <form class="col s12" action="/salvar-aluno" method="POST">
                     @csrf
                     <div class="row">
                         <div class="input-field col s12">

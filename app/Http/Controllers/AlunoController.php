@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\AlunoFormRequest;
+use App\Http\Requests\AlunoUpdateFormRequest;
+use App\Aluno;
 
 class AlunoController extends Controller
 {
@@ -24,29 +27,23 @@ class AlunoController extends Controller
         return view('aluno.edit')->with('aluno', $Aluno);
     }
 
-    public function salvar(){
-        $this->validar();
-        $data = request()->all();
-
+    public function salvar(AlunoFormRequest $request){
         $aluno = new Aluno();
-        $aluno->nome = $data['nome'];
-        $aluno->matricula = $data['matricula'];
-        $aluno->email = $data['email'];
-        $aluno->turma_id = $data['turma_id'];
+        $aluno->nome = $request['nome'];
+        $aluno->matricula = $request['matricula'];
+        $aluno->email = $request['email'];
+        $aluno->turma_id = $request['turma_id'];
         $aluno->save();
 
         session()->flash('sucess', 'aluno salva com sucesso!');
         return redirect('alunos');
     }
 
-    public function update(aluno $aluno){
-        $this->validar();
-        $data = request()->all();
-
-        $aluno->nome = $data['nome'];
-        $aluno->matricula = $data['matricula'];
-        $aluno->email = $data['email'];
-        $aluno->turma_id = $data['turma_id'];
+    public function update(aluno $aluno, AlunoUpdateFormRequest $request){
+        $aluno->nome = $request['nome'];
+        $aluno->matricula = $request['matricula'];
+        $aluno->email = $request['email'];
+        $aluno->turma_id = $request['turma_id'];
         $aluno->save();
 
         session()->flash('sucess', 'Aluno editado com sucesso!');

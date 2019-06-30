@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Request;
 
-class ProfessorUpdateFormRequest extends FormRequest
+class AlunoUpdateFormRequest extends FormRequest
 {
     public function authorize()
     {
@@ -18,7 +18,7 @@ class ProfessorUpdateFormRequest extends FormRequest
 
         return [
             'nome'      => 'required|min:6|max:60',
-            'matricula' => "required|min:10|max:20|unique:professores,matricula,{$id},id",
+            'matricula' => "required|min:10|max:20|unique:alunos,matricula,{$id},id",
             'email'     => 'required'
         ];
     }

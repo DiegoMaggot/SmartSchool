@@ -9,30 +9,30 @@ Professores
         <div class="card card-default">
             <div class="card-body">
                 <ul class="list-group">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                <th scope="col" class="center-align">Nome</th>
-                                <th scope="col" class="center-align">Matricula</th>
-                                <th scope="col"class="center-align">Email</th>
-                                <th scope="col"class="center-align">Opcões</th>
-                                </tr>
-                            </thead>
-                            @foreach ($professores as $professor)
-                            <tbody>
-                                <tr>
-                                    <td class="center-align">{{$professor->nome}}</td>
-                                    <td class="center-align">{{$professor->matricula}}</td>
-                                    <td class="center-align">{{$professor->email}}</td>
-                                    <td class="center-align">
-                                        <a href="/professores/{{$professor->id}}" class="waves-effect waves-light btn">Detalhes</a>
-                                        <a href="/professores/{{$professor->id}}/edit" class="waves-effect waves-light btn">Editar</a>
-                                        <a href="/professores/{{$professor->id}}/delete" class="waves-effect waves-light btn">Apagar</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            @endforeach
-                            </table>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col" class="center-align">Nome</th>
+                            <th scope="col" class="center-align">Matricula</th>
+                            <th scope="col"class="center-align">Email</th>
+                            <th scope="col"class="center-align">Opcões</th>
+                            </tr>
+                        </thead>
+                        @foreach ($professores as $professor)
+                        <tbody>
+                            <tr>
+                                <td class="center-align">{{$professor->nome}}</td>
+                                <td class="center-align">{{$professor->matricula}}</td>
+                                <td class="center-align">{{$professor->email}}</td>
+                                <td class="center-align">
+                                    <a href="/professores/{{$professor->id}}" class="waves-effect waves-light btn-small"><i class="material-icons">visibility</i></a>
+                                    <a href="/professores/{{$professor->id}}/edit" class="waves-effect waves-light btn-small"><i class="material-icons">create</i></a>
+                                    <a href="/professores/{{$professor->id}}/delete" class="waves-effect waves-light btn-small"><i class="material-icons">delete</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        @endforeach
+                    </table>
                 </ul>
             </div>
         </div>

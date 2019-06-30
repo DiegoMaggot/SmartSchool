@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator;
 use App\Http\Requests\ProfessorFormRequest;
 use App\Http\Requests\ProfessorUpdateFormRequest;
 use App\Professor;
-use Illuminate\Validation\Rule;
 
 class ProfessorController extends Controller
 {

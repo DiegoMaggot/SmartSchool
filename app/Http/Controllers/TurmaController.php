@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\TurmaFormRequest;
+use App\Http\Requests\TurmaUpdateFormRequest;
+use App\Turma;
 
 class TurmaController extends Controller
 {
@@ -24,23 +27,19 @@ class TurmaController extends Controller
         return view('turma.edit')->with('turma', $turma);
     }
 
-    public function salvar(){
-        $this->validar();
-        $data = request()->all();
+    public function salvar(TurmaFormRequest $request){
         $turma = new turma();
-        $turma->campus = $data['campus'];
-        $turma->curso = $data['curso'];
+        $turma->campus = $request['campus'];
+        $turma->curso = $request['curso'];
         $turma->save();
 
         session()->flash('sucess', 'turma salva com sucesso!');
         return redirect('turmas');
     }
 
-    public function update(Turma $turma){
-        $this->validar();
-        $data = request()->all();
-        $turma->campus = $data['campus'];
-        $turma->curso = $data['curso'];
+    public function update(Turma $turma, TurmaUpdateFormRequest $request){
+        $turma->campus = $request['campus'];
+        $turma->curso = $request['curso'];
         $turma->save();
 
         session()->flash('sucess', 'turma editada com sucesso!');
